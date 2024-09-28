@@ -1,6 +1,6 @@
 ![01.png](img%2F01.png)
 
+![02.png](img%2F02.png)
 
-### microk8s kubectl get nodes у меня работает, а kubectl get nodes выдает ошибку, переустанавливал несколько раз по инструкции, решения не нашел
+![03.png](img%2F03.png)
 
-![img.png](img.png)
