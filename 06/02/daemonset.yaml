@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: network-multitool
+  labels:
+    tier: node
+    app: network-multitool
+spec:
+  selector:
+    matchLabels:
+      tier: node
+      app: network-multitool
+  template:
+    metadata:
+      labels:
+        tier: node
+        app: network-multitool
+    spec:
+      hostNetwork: true
+      tolerations:
+      - operator: Exists
+        effect: NoSchedule
+      containers:
+      - name: network-multitool
+        image: wbitt/network-multitool
+        volumeMounts:
+        - name: varlog
+          mountPath: /var/log
+      terminationGracePeriodSeconds: 30
+      volumes:
+      - name: varlog
+        hostPath:
+          path: /var/log
