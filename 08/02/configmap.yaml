@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: my-webpage-config
+data:
+  index.html: |
+    <html>
+    <head><title>Моя веб-страница</title></head>
+    <body><h1>Добро пожаловать на мою веб-страницу!</h1></body>
+    </html>
